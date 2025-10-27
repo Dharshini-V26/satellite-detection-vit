@@ -95,3 +95,10 @@ python scripts/verify_predictions.py
 5) End-to-End Pipeline: Includes detection, annotation, training, and quality validation steps
 6) Multi-Scale Detection: Adapts to objects of varying sizes and resolutions
 
+# Sample Output Screenshots
+<img width="953" height="501" alt="image" src="https://github.com/user-attachments/assets/a4ad829b-0dc7-49ff-beeb-6a2f39f699a1" />
+<img width="616" height="812" alt="image" src="https://github.com/user-attachments/assets/a00d4dc9-e111-43aa-a994-34a812b939f9" />
+<img width="607" height="678" alt="image" src="https://github.com/user-attachments/assets/513edb5f-9073-4194-b9b4-635a5a49e7ea" />
+
+
+
