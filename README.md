@@ -20,24 +20,7 @@ Input: 224×224 RGB satellite images
 Architecture: 12 transformer blocks with 12 attention heads
 Output: Bounding box coordinates and object embeddings for retrieval
 
-INPUT SATELLITE IMAGE (224×224)
-    ↓
-Patch Embedding (14×14 patches)
-    ↓
-Vision Transformer Encoder (12 blocks)
-    ↓
-Multi-Head Self-Attention (global context)
-    ↓
-Feature Extraction + Object Localization
-    ↓
-Bounding Box Head (3-layer MLP)
-    ↓
-Embedding Head (for similarity-based retrieval)
-    ↓
-OUTPUT: [bbox, confidence, embedding]
-        ↓
-        └─→ Detection & Localization
-        └─→ Visual Search & Retrieval
+<img width="432" height="484" alt="image" src="https://github.com/user-attachments/assets/e2b11fd7-968f-4615-ad1c-e81b181cbc05" />
 
 # Training Process
 ## Data Preparation
