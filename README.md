@@ -15,10 +15,11 @@ The goal of this project is to develop a comprehensive system that can:
 ## Architecture Overview
 
 Vision Transformer for Object Detection and Retrieval
+
 Pre-trained on ImageNet-21K
-Input: 224×224 RGB satellite images
-Architecture: 12 transformer blocks with 12 attention heads
-Output: Bounding box coordinates and object embeddings for retrieval
+1) Input: 224×224 RGB satellite images
+2) Architecture: 12 transformer blocks with 12 attention heads
+3) Output: Bounding box coordinates and object embeddings for retrieval
 
 <img width="432" height="484" alt="image" src="https://github.com/user-attachments/assets/e2b11fd7-968f-4615-ad1c-e81b181cbc05" />
 
@@ -26,10 +27,10 @@ Output: Bounding box coordinates and object embeddings for retrieval
 ## Data Preparation
 ## Image Processing
 
-Input Types: Satellite images in TIF and JPG formats (variable resolutions)
-Standardization: All images resized to 224×224 pixels
-Normalization: Applied ImageNet standard mean and standard deviation per channel
-Format Conversion: All images standardized to JPEG for consistency
+1) Input Types: Satellite images in TIF and JPG formats (variable resolutions)
+2) Standardization: All images resized to 224×224 pixels
+3) Normalization: Applied ImageNet standard mean and standard deviation per channel
+4) Format Conversion: All images standardized to JPEG for consistency
 
 ## Annotation Generation
 ## Methodology
@@ -37,14 +38,14 @@ Format Conversion: All images standardized to JPEG for consistency
 Automated object detection was performed using image processing techniques to generate annotations.
 
 ## Processing pipeline includes:
-Histogram Equalization: Enhances image contrast for better object visibility
-Morphological Operations: Opening and closing to reduce noise and refine shapes
-Edge Detection and Contour Analysis: Identifies object boundaries and spatial locations
+1) Histogram Equalization: Enhances image contrast for better object visibility
+2) Morphological Operations: Opening and closing to reduce noise and refine shapes
+3) Edge Detection and Contour Analysis: Identifies object boundaries and spatial locations
 
 ## Output
-Annotation Format: COCO-style JSON with bounding box coordinates
-Dataset Quality: 3,390 detected objects across 80 satellite images
-Average Objects per Image: 42.4
+1) Annotation Format: COCO-style JSON with bounding box coordinates
+2) Dataset Quality: 3,390 detected objects across 80 satellite images
+3) Average Objects per Image: 42.4
 
 ## Installation
 
@@ -61,6 +62,7 @@ pip install -r requirements.txt
 python scripts/complete_system.py
 
 This script automatically performs:
+
 Object detection on input satellite images
 Annotation generation
 Model training and fine-tuning
@@ -69,15 +71,19 @@ Production of a labeled dataset
 ## Individual Steps
 
 1. Auto-Detect & Identify Objects
+   
 python scripts/generate_annotations.py
 
 2. Train Visual Search Model
+   
 python scripts/train_vit_model.py
 
 3. Search & Retrieve Similar Objects
+   
 python scripts/test_on_new_data.py
 
 4. Validate Dataset Quality
+   
 python scripts/verify_predictions.py
 
 ## Key Features
@@ -88,3 +94,4 @@ python scripts/verify_predictions.py
 4) Transfer Learning: Utilizes pre-trained Vision Transformer for efficient training with limited data
 5) End-to-End Pipeline: Includes detection, annotation, training, and quality validation steps
 6) Multi-Scale Detection: Adapts to objects of varying sizes and resolutions
+
